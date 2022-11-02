@@ -95,14 +95,14 @@ szamlalo = 1
 helyes = 0
 for kor in range(5):
     print(f"   {szamlalo}. kör:")
-    a = random.randint(0,99)
-    b = random.randint(0,99)
+    a = random.randint(10,99)
+    b = random.randint(10,99)
     ossz = abs(a + b)
     kivonas = abs(a - b)
     print(f"      a két szám összege {ossz}, különbsége {kivonas}. Mi lehet ez a két szám?")
     bekeres1 = int(input("        egyik szám: "))
     bekeres2 = int(input("        másik szám: "))
-    if bekeres1 == a or bekeres1 == b and bekeres2 == a or bekeres2 == b:
+    if (bekeres1 == a and bekeres1 == b) or (bekeres2 == a and bekeres2 == b):
         helyes += 1
         print("      Helyes!")
     else:
@@ -112,4 +112,5 @@ for kor in range(5):
 print(f"   Végeztünk, helyes találataid száma: {helyes}")
         
     
+
 
